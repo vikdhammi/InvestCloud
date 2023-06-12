@@ -1,0 +1,10 @@
+C:\Users\vdhammi\source\repos\InvestCloud\InvestCloud\bin\publish\InvestCloud.exe
+C:\Users\vdhammi\source\repos\InvestCloud\InvestCloud\bin\publish\InvestCloud.dll
+C:\Users\vdhammi\source\repos\InvestCloud\InvestCloud\bin\publish\InvestCloud.deps.json
+C:\Users\vdhammi\source\repos\InvestCloud\InvestCloud\bin\publish\InvestCloud.runtimeconfig.json
+C:\Users\vdhammi\source\repos\InvestCloud\InvestCloud\bin\publish\InvestCloud.pdb
+C:\Users\vdhammi\source\repos\InvestCloud\InvestCloud\bin\publish\Newtonsoft.Json.dll
+C:\Users\vdhammi\source\repos\InvestCloud\InvestCloud\bin\publish\RestSharp.dll
+C:\Users\vdhammi\source\repos\InvestCloud\InvestCloud\bin\publish\System.Text.Encodings.Web.dll
+C:\Users\vdhammi\source\repos\InvestCloud\InvestCloud\bin\publish\System.Text.Json.dll
+C:\Users\vdhammi\source\repos\InvestCloud\InvestCloud\bin\publish\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
