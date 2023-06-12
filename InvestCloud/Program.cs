@@ -16,7 +16,7 @@ long[,] dataSetA = new long[dimensions, dimensions];
 long[,] dataSetB = new long[dimensions, dimensions];
 dataSetA = GetDatasetData("A", dataSetA);
 dataSetB = GetDatasetData("B", dataSetB);
-//CrossProduct(dataSetA, dataSetB);
+CrossProduct(dataSetA, dataSetB);
 Stopwatch timer = new Stopwatch();
 timer.Start();
 long[,] dataSetR = StrassenMultiplication(dataSetA, dataSetB);
@@ -60,7 +60,6 @@ static long[,] GetDatasetData(string dataset, long[,] dataSet)
             int j = 0;
             foreach(var w in obj.Value)
             {
-                //Console.WriteLine(w);
                 dataSet[i,j] = (long)w;
                 j++;
             }
@@ -90,7 +89,6 @@ static void CrossProduct(long[,] dataSetA, long[,] dataSetB)
     timer.Stop();
     TimeSpan ts = timer.Elapsed;
     Console.WriteLine("Cross Prod took: " + ts.Seconds + " seconds");
-    //Console.WriteLine(String.Join(" ", result.Cast<long>()));
     HashOutput(String.Join(" ", result.Cast<long>()));
 }
 
