@@ -2,9 +2,6 @@
 using Newtonsoft.Json;
 using RestSharp;
 using System.Diagnostics;
-using System.Globalization;
-using System.Security.Cryptography;
-using System.Text;
 
 const string ApiKey = "https://recruitment-test.investcloud.com/api/numbers/";
 const string Column = "col";
@@ -19,8 +16,8 @@ long[,] dataSetA = new long[dimensions, dimensions];
 long[,] dataSetB = new long[dimensions, dimensions];
 dataSetA = GetDatasetData("A", dataSetA);
 dataSetB = GetDatasetData("B", dataSetB);
-CrossProduct(dataSetA, dataSetB);
-Stopwatch timer = new System.Diagnostics.Stopwatch();
+//CrossProduct(dataSetA, dataSetB);
+Stopwatch timer = new Stopwatch();
 timer.Start();
 long[,] dataSetR = StrassenMultiplication(dataSetA, dataSetB);
 timer.Stop();
@@ -69,9 +66,6 @@ static long[,] GetDatasetData(string dataset, long[,] dataSet)
             }
         }
     }
-
-    //Console.WriteLine(String.Join(" ", dataSet.Cast<long>()));
-    //Console.ReadLine();
     return dataSet;
 }
 
@@ -102,8 +96,6 @@ static void CrossProduct(long[,] dataSetA, long[,] dataSetB)
 
 static void HashOutput(string postData)
 {
-    //MD5 md5Hash = MD5.Create();
-    //var hashed = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(postData.Trim().Replace(" ", "")));
     string hashedString;
     
     using(System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
@@ -112,8 +104,6 @@ static void HashOutput(string postData)
         byte[] output = md5.ComputeHash(input);
         hashedString = Convert.ToHexString(output); 
             }
-    //PostResultData(System.Text.Encoding.Default.GetString(hashed));
-    //Console.WriteLine(postHashedData);
     PostResultData(hashedString);
 
 }
